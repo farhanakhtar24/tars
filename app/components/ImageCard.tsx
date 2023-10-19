@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 
@@ -7,13 +8,12 @@ type Props = {
 };
 
 const ImageCard = ({ item }: Props) => {
-	console.log("item", item);
-
-	const { alt_description, urls, user, likes } = item;
+	const { alt_description, urls, user, likes, slug } = item;
 	const { name, profile_image, username } = user;
 
 	return (
-		<div
+		<Link
+			href={`/photos/${slug}`}
 			className="flex flex-col w-full h-full border border-[#E5E5E5] rounded-xl overflow-hidden
 		shadow-md">
 			<Image
@@ -56,7 +56,7 @@ const ImageCard = ({ item }: Props) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 

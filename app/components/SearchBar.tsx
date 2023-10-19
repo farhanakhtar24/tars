@@ -1,14 +1,14 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 
-type Props = {
-	searchText: string;
-	setSearchText: any;
-};
+type Props = {};
 
-const SearchBar = ({ searchText, setSearchText }: Props) => {
+const SearchBar = ({}: Props) => {
 	const [input, setInput] = useState("");
+	const router = useRouter();
+
 	return (
 		<div
 			className="w-96 h-10 rounded-md bg-[#FAFAFA] border border-[#ECECEC] text-[#C4C4C4]
@@ -18,7 +18,9 @@ const SearchBar = ({ searchText, setSearchText }: Props) => {
 				onChange={(e) => setInput(e.target.value)}
 				onKeyDown={(e) => {
 					if (e.key === "Enter" && input) {
-						setSearchText(input);
+						// setSearchText(input);
+						// use naviagte
+						router.push(`/search/?query=${input}`);
 						setInput("");
 					}
 				}}

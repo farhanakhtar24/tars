@@ -1,15 +1,12 @@
 "use client";
 import React from "react";
-import logo from "../assets/Image Gallery Logo.svg";
+import logo from "../../assets/Image Gallery Logo.svg";
 import Image from "next/image";
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar";
 
-type Props = {
-	searchText: string;
-	setSearchText: any;
-};
+type Props = {};
 
-const Navbar = ({ searchText, setSearchText }: Props) => {
+const Navbar = ({}: Props) => {
 	return (
 		<div className="w-full flex justify-center">
 			<div className="w-3/4 flex justify-between items-center p-5">
@@ -20,10 +17,7 @@ const Navbar = ({ searchText, setSearchText }: Props) => {
 					width={999}
 					height={999}
 				/>
-				<SearchBar
-					searchText={searchText}
-					setSearchText={setSearchText}
-				/>
+				<SearchBar />
 				<ul className="flex gap-4 font-bold text-xs">
 					<li className="cursor-pointer">Explore</li>
 					<li className="cursor-pointer">Collection</li>

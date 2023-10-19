@@ -1,10 +1,10 @@
 import React from "react";
-import MainPage from "./components/MainPage";
+import SearchPage from "./_components/SearchPage";
 
 type Props = {};
 
 const page = (props: Props) => {
-	return <MainPage />;
+	return <SearchPage />;
 };
 
 export default page;

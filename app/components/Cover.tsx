@@ -1,14 +1,12 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import coverImage from "../assets/Cover Image.png";
 import { CiSearch } from "react-icons/ci";
 
-type Props = {
-	searchText: string;
-	setSearchText: any;
-};
+type Props = {};
 
-const Cover = ({ searchText, setSearchText }: Props) => {
+const Cover = ({}: Props) => {
+	const router = useRouter();
 	const [input, setInput] = useState("");
 	return (
 		<div
@@ -26,8 +24,9 @@ const Cover = ({ searchText, setSearchText }: Props) => {
 					onChange={(e) => setInput(e.target.value)}
 					onKeyDown={(e) => {
 						if (e.key === "Enter" && input) {
-							setSearchText(input);
-							setInput(searchText);
+							// use naviagte
+							router.push(`/search/?query=${input}`);
+							setInput("");
 						}
 					}}
 					value={input}
