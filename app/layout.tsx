@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className} font-Montserrat`}>
+			<body className={`${inter.className} font-Montserrat relative`}>
 				<ReactQueryContext>
 					<Navbar />
 					{children}

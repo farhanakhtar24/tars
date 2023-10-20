@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { getSearchedPhotos } from "@/app/queryhooks/getPhotos";
 import Spinner from "@/app/components/ui/Spinner";
-import ImagesCatalogue from "@/app/components/ImagesCatalogue";
+import ImagesCatalogue from "@/app/components/ui/ImagesCatalogue";
 
 type Props = {};
 

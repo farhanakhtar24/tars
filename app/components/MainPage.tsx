@@ -4,7 +4,7 @@ import Navbar from "./ui/Navbar";
 import Cover from "./Cover";
 import { useQuery } from "@tanstack/react-query";
 import { getRandomPhotos } from "../queryhooks/getPhotos";
-import ImagesCatalogue from "./ImagesCatalogue";
+import ImagesCatalogue from "./ui/ImagesCatalogue";
 import Spinner from "./ui/Spinner";
 
 type Props = {};

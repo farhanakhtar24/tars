@@ -12,7 +12,8 @@ const SearchBar = ({}: Props) => {
 	return (
 		<div
 			className="w-96 h-10 rounded-md bg-[#FAFAFA] border border-[#ECECEC] text-[#C4C4C4]
-        flex items-center p-2 gap-1 shadow-[inset_0_4_19px_rgba(0,0,0,0.05)]">
+        items-center p-2 gap-1 shadow-[inset_0_4_19px_rgba(0,0,0,0.05)]
+		hidden sm:flex">
 			<CiSearch className="w-5 h-5" />
 			<input
 				onChange={(e) => setInput(e.target.value)}
