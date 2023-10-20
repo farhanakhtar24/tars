@@ -15,7 +15,7 @@ const ImagesCatalogue = ({ data }: Props) => {
 
 	return (
 		<div className="w-full flex justify-center">
-			<div className="w-4/5 sm:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-10 py-10">
+			<div className="w-4/5 sm:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-10 py-10">
 				{data.map((item: any, idx: React.Key | null | undefined) => {
 					return (
 						<ImageCard

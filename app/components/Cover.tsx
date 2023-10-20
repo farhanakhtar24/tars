@@ -24,7 +24,6 @@ const Cover = ({}: Props) => {
 					onChange={(e) => setInput(e.target.value)}
 					onKeyDown={(e) => {
 						if (e.key === "Enter" && input) {
-							// use naviagte
 							router.push(`/search/?query=${input}`);
 							setInput("");
 						}
@@ -32,7 +31,8 @@ const Cover = ({}: Props) => {
 					value={input}
 					type="text"
 					placeholder="Search Image Here"
-					className="h-full flex-1 outline-none tracking-wide text-sm font-medium text-black/70"
+					className="h-full flex-1 outline-none tracking-wide text-sm font-medium text-black/70
+					dark:bg-white"
 				/>
 			</div>
 		</div>

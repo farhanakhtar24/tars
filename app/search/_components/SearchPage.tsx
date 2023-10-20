@@ -66,7 +66,7 @@ const SearchPage = (props: Props) => {
 			)}
 			{!isLoadingSearchedPhotos && (
 				<div className="w-full flex justify-center items-center">
-					<h1 className="w-3/4 text-4xl font-bold pt-10 text-[#4F4F4F]">
+					<h1 className="w-4/5 sm:w-3/4 text-4xl font-bold pt-5 sm:pt-10 text-[#4F4F4F]">
 						{search}
 					</h1>
 				</div>
