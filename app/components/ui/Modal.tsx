@@ -68,7 +68,7 @@ const Modal = ({ selectedImage, setSelectedImage }: Props) => {
 						/>
 						<div
 							className="absolute -bottom-16 right-3 sm:right-7 sm:bottom-7 p-5 sm:py-5 sm:px-9 bg-[#3CB46E] rounded text-white font-bold
-						text-xs leading-3 cursor-pointer"
+						text-xs leading-3 cursor-pointer z-10"
 							onClick={handleDownload}>
 							Download Image
 						</div>
