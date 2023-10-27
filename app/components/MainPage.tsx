@@ -28,6 +28,7 @@ const MainPage = (props: Props) => {
 		}
 	}, [photos, isLoadingRandomPhotos]);
 
+	// hook for infinite scrolling
 	useEffect(() => {
 		function handleScroll() {
 			if (

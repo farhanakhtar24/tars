@@ -9,13 +9,14 @@ import { AiOutlineShareAlt as ShareIcon } from "react-icons/ai";
 import { AiOutlineInfoCircle as InfoIcon } from "react-icons/ai";
 import axios from "axios";
 import { saveAs } from "file-saver";
+import { NEXT_PUBLIC_ACCESSKEY } from "@/app/creds";
 
 type Props = {
 	selectedImage: any;
 	setSelectedImage: any;
 };
 
-const ACCESSKEY = process.env.NEXT_PUBLIC_ACCESSKEY;
+const ACCESSKEY = NEXT_PUBLIC_ACCESSKEY;
 
 const Modal = ({ selectedImage, setSelectedImage }: Props) => {
 	const { alt_description, urls, user, likes, slug, links } = selectedImage;
@@ -41,7 +42,6 @@ const Modal = ({ selectedImage, setSelectedImage }: Props) => {
 		navigator.clipboard
 			.writeText(imageUrl)
 			.then(() => {
-				console.log("Image URL copied to clipboard:", imageUrl);
 				setCopied(true);
 			})
 			.catch((error) => {

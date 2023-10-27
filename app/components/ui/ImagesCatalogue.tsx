@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import ImageCard from "./ImageCard";
-import Image from "next/image";
-import { ImCross as Cross } from "react-icons/im";
 import Modal from "./Modal";
 
 type Props = {

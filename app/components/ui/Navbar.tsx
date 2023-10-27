@@ -12,7 +12,6 @@ type Props = {};
 
 const Navbar = ({}: Props) => {
 	const [openSearch, setOpenSearch] = useState(false);
-	console.log("openSearch", openSearch);
 
 	return (
 		<div className="w-full flex flex-col justify-center items-center">

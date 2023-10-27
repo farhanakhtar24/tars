@@ -1,6 +1,7 @@
 import axios from "axios";
+import { NEXT_PUBLIC_ACCESSKEY } from "../creds";
 
-const ACCESSKEY = process.env.NEXT_PUBLIC_ACCESSKEY;
+const ACCESSKEY = NEXT_PUBLIC_ACCESSKEY;
 
 export const getRandomPhotos = async ({ queryKey }: any) => {
 	const page = await queryKey[1];
