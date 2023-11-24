@@ -32,8 +32,9 @@ const Navbar = ({}: Props) => {
 						<SearchBar />
 					</div>
 					<ul className="gap-4 font-bold text-xs hidden sm:flex">
-						<li className="cursor-pointer">Explore</li>
-						<li className="cursor-pointer">Collection</li>
+						<li className="cursor-pointer">
+							<Link href={`/`}>Explore</Link>
+						</li>
 						<li className="cursor-pointer">Community</li>
 					</ul>
 					<div className="hidden font-bold text-xs sm:block">

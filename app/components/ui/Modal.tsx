@@ -10,6 +10,7 @@ import { AiOutlineInfoCircle as InfoIcon } from "react-icons/ai";
 import axios from "axios";
 import { saveAs } from "file-saver";
 import { NEXT_PUBLIC_ACCESSKEY } from "@/app/creds";
+import Link from "next/link";
 
 type Props = {
 	selectedImage: any;
@@ -115,14 +116,20 @@ const Modal = ({ selectedImage, setSelectedImage }: Props) => {
 								{/* ig, x , likes,downloads */}
 								<div className="flex items-center font-semibold italic text-[#A7A7A7] text-xs gap-2">
 									{instagram_username && (
-										<p className="flex items-center">
+										<Link
+											href={`https://www.instagram.com/${instagram_username}/`}
+											className="flex items-center"
+											target="_blank">
 											<Ig />/{instagram_username}
-										</p>
+										</Link>
 									)}
 									{twitter_username && (
-										<p className="flex items-center">
+										<Link
+											href={`https://twitter.com/${twitter_username}/`}
+											className="flex items-center"
+											target="_blank">
 											<Twitter />/{twitter_username}
-										</p>
+										</Link>
 									)}
 								</div>
 								<div className="flex gap-1 items-center text-[#858484]">
